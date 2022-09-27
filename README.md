@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/this-is-a-responsive-landing-page-using-media-query-xJKaGye_4u)
+- Live Site URL: [Click to view page](https://goldenthrust.github.io/product-preview-card-component-main/)
 
 ## My process
 
