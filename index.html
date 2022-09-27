@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      /* primary color */
+      --cyan: hsl(158, 36%, 37%);
+      --Cream: hsl(30, 38%, 92%);
+
+      /* Neutral color  */
+      --blue: hsl(212, 21%, 14%);
+      --grayish_blue: hsl(228, 12%, 48%);
+      --White: hsl(0, 0%, 100%);
+
+      /* font size Font size (paragraph) */
+      --para: 14px;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+    body{
+      background-color: var(--Cream);
+    }
+    /* container for the product */
+    .container{
+      display: grid;
+      grid-template-columns: auto;
+      margin: 25px auto;
+      padding-bottom: 10px;
+      width: 94%;
+      border-radius: 20px;
+      background-color: var(--White);
+    }
+    img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .img img:last-of-type{
+      display: none;
+    }
+    p,h1,div.price{
+      margin: 10px 20px;
+    }
+    p{
+      line-height: 23px;
+      font-family: Montserrat;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      color: var(--grayish_blue);
+    }
+    p:first-of-type{
+      font-size: var(--para);
+      margin-top: 25px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 4.2px;
+    }
+    h1{
+      color: var(--blue);
+      font-size: 37.7px;
+      line-height: 40px;
+      font-family: Fraunces;
+      font-weight: 700;
+    }
+    .price{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .price span{
+      font-family: Fraunces;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-right: 16px;
+    }
+    del{
+      font-family: Montserrat;
+      font-weight: 500;
+      color: var(--grayish_blue);
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+    button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      width: 85%;
+      height: 50px;
+      border-width: 0;
+      background-color: var(--cyan);
+      border-radius: 8px;
+      font-family: Montserrat;
+      color: var(--White);
+      font-weight: 700;
+    }
+    button:active{
+      background-color: rgb(31, 70, 31);
+    }
+    button svg{
+      margin-right: 9px;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (min-width: 650px){
+    .container{
+      margin: 80px auto;
+      width: 590px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding-bottom: 0;
+    }
+    img{
+      border-radius: 10px 0 0 10px;
+    }
+    .img img:last-of-type{
+      display: block;
+    }
+    .img img:first-of-type{
+      display: none;
+    }
+    p,h1,div.price,button{
+      margin: 15px;
+    }
+    p:first-of-type{
+      font-size: 12px;
+    }
+    button{
+      width: 83%;
+      height: 48px;
+      margin: auto;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="img">
+    <img src="images/image-product-mobile.jpg" alt="image-product-mobile">
+    <img src="images/image-product-desktop.jpg" alt="image-product-desktop">
+  </div>
+<div class="content">
+  <p>Perfume</p>
+
+  <h1>Gabrielle Essence Eau De Parfum</h1>
+
+  <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.</p>
+<div class="price">
+  <span>$149.99</span>
+  <del>$169.99</del>
+</div>
+  <button><svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>Add to Cart</button>
+</div>
+</div>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/sluggish.superstition.5" target="_blank" rel="noopener noreferrer">Adeniji Olajide</a>.
+  </div>
+</footer>
+</body>
+</html>
